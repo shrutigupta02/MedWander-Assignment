@@ -1,7 +1,7 @@
 # Full Stack Intern Assignment
 
-# Live Demo (Frontend only) : https://fullstack-assignment.netlify.app/
-# Excel sheet link : https://docs.google.com/spreadsheets/d/1PZtmojZG-Xr5OGTqOzGTl3wsSGhxDRJtc_1Ay2oFJgM/edit?usp=sharing
+## Live Demo (Frontend only) : https://fullstack-assignment.netlify.app/
+## Excel sheet link : https://docs.google.com/spreadsheets/d/1PZtmojZG-Xr5OGTqOzGTl3wsSGhxDRJtc_1Ay2oFJgM/edit?usp=sharing
 
 This project implements a web application for managing user data and interacting with Google Sheets via a RESTful API. It utilizes React for the front-end, Express.js for the back-end, MySQL for database storage, and Google Sheets API for spreadsheet integration.
 
@@ -66,7 +66,7 @@ This project implements a web application for managing user data and interacting
 The application provides the following features:
 
 - **Form Submission:** Users can submit a form (name, country code, phone number) which is stored in a MySQL database (`userdata` table).
-- **Google Sheets Integration:** Upon form submission, data is also written to a specified Google Sheet using the Google Sheets API (`Sheet1`).
+- **Google Sheets Integration:** Upon form submission, data is also written to a specified Google Sheet using the Google Sheets API (`User-Data`).
 
 Link to the excel sheet: https://docs.google.com/spreadsheets/d/1PZtmojZG-Xr5OGTqOzGTl3wsSGhxDRJtc_1Ay2oFJgM/edit?usp=sharing
 
