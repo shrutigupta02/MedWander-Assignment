@@ -1,0 +1,46 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.home-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.navigate-title, .refresh-title {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.navigate-button, .refresh-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigate-button:hover, .refresh-button:hover {
+    background-color: #0056b3;
+}
+
+.divider {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
