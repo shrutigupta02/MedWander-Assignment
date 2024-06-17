@@ -23,15 +23,16 @@ db.connect((err) => {
 });
 
 app.post('/user', (req, res)=>{
-    const query = 'INSERT INTO user-data (`id`, `name`, `country-code`, `phone-number`) values (?)';
+    const query = 'INSERT INTO userdata (`id`, `name`, `country-code`, `phone-number`, `form-type`) VALUES (?)';
     const values = [
         uuidv4(),
         req.body.name,
         req.body.countryCode,
-        req.body.phoneNumber
+        req.body.phoneNumber,
+        req.body.formType
     ];
 
-    db.query(query, (err, result)=>{
+    db.query(query, [values], (err, result)=>{
         if(err){
             console.log(err);
             res.status(500).send({error : 'Database query error'});

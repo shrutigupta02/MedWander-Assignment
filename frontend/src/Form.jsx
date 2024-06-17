@@ -1,6 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useFormik } from 'formik';
+import axios from 'axios';
 import './Form.css'
 
 const validate = values => {
@@ -35,15 +36,20 @@ export default function Form(){
     const navigate = useNavigate();
     const location = useLocation();
     const { title } = location.state;
+    const { type } = location.state;
     const formik = useFormik({
         initialValues: {
           name: '',
           countryCode: '',
           phoneNumber: '',
+          formType: type
         },
         validate,
         onSubmit: values => {
           alert(JSON.stringify(values, null, 2));
+          axios.post('http://localhost:1234/user', values)
+            .then(result => console.log("success"))
+            .catch(err => console.log(err));
         },
       });
 

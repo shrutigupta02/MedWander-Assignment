@@ -5,11 +5,11 @@ export default function Home(){
 
     return(
         <div>
-            <button onClick={()=> navigate("/form", { state: { title: "Form A" } })}
+            <button onClick={()=> navigate("/form", { state: { title: "Form A", type: 'a' } })}
             >Form A
             </button> 
 
-            <button onClick={()=> navigate("/form", { state: { title: "Form B" } })}
+            <button onClick={()=> navigate("/form", { state: { title: "Form B", type: 'b' } })}
             >Form B</button>
         </div>
     )
