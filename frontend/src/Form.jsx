@@ -1,7 +1,7 @@
 import {useNavigate} from 'react-router-dom';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useLocation } from 'react-router-dom';
 import { useFormik } from 'formik';
+import './Form.css'
 
 const validate = values => {
     const errors = {};
@@ -48,46 +48,47 @@ export default function Form(){
       });
 
     return(
-        <div>
+        <div className="form-container">
             <h1>{title}</h1>
-            <div 
-            onClick={() => navigate(-1)} 
-            className='top-5 left-5 absolute cursor-pointer hover:underline'>
-                <ArrowBackIcon/> 
-                Go back
-            </div>
             <form onSubmit={formik.handleSubmit}>
-                <label htmlFor='name'>Name</label>
+                <label htmlFor='name' className='form-label'>Name</label>
+                {formik.touched.name && formik.errors.name ? <p className='error-message'>{formik.errors.name}</p> : null}
                 <input 
-                onChange={formik.handleChange}
-                value={formik.values.name}
-                type='text' id='name' name='name'/>
+                    onChange={formik.handleChange}
+                    value={formik.values.name}
+                    type='text' id='name' name='name'
+                    className='form-input'
+                />
 
-                {formik.touched.name && formik.errors.name ? <p>{formik.errors.name}</p> : null}
-
-                <label htmlFor='countryCode'>Country code</label>
-                <select name='countryCode' id='countryCode'
-                onChange={formik.handleChange}
-                value={formik.values.countryCode}
+                <label htmlFor='countryCode' className='form-label'>Country code</label>
+                {formik.touched.countryCode && formik.errors.countryCode ? <p className='error-message'>{formik.errors.countryCode}</p> : null}
+                <select 
+                    onChange={formik.handleChange}
+                    value={formik.values.countryCode}
+                    id='countryCode' name='countryCode'
+                    className='form-input'
                 >
-                <option value="" disabled>Select Country Code</option>
-                <option value="+91">+91 (India)</option>
-                <option value="+1">+1 (USA)</option>
-                <option value="+44">+44 (UK)</option>
+                    <option value="" disabled>Select Country Code</option>
+                    <option value="+91">+91 (India)</option>
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+44">+44 (UK)</option>
                 </select>
 
-                {formik.touched.countryCode && formik.errors.countryCode ? <p>{formik.errors.countryCode}</p> : null}
-
-                <label htmlFor='phoneNumber'>Phone number</label>
+                <label htmlFor='phoneNumber' className='form-label'>Phone number</label>
+                {formik.touched.phoneNumber && formik.errors.phoneNumber ? <p className='error-message'>{formik.errors.phoneNumber}</p> : null}
                 <input 
-                onChange={formik.handleChange}
-                value={formik.values.phoneNumber}
-                type='text' id='phoneNumber' name='phoneNumber'/>
-                {formik.touched.phoneNumber && formik.errors.phoneNumber ? <p>{formik.errors.phoneNumber}</p> : null}
+                    onChange={formik.handleChange}
+                    value={formik.values.phoneNumber}
+                    type='text' id='phoneNumber' name='phoneNumber'
+                    className='form-input'
+                />
 
-                <button type="submit">Submit</button>
+                <button type="submit" className='submit-button'>Submit</button>
             </form>
-            
+            <hr/>
+            <div onClick={() => navigate(-1)} className='go-back'>
+                Home Page
+            </div>
         </div>
     )
 }

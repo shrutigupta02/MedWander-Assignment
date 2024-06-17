@@ -1,0 +1,64 @@
+/* Container styles */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Go back link styles */
+.go-back {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #007bff; 
+}
+
+.go-back:hover {
+    text-decoration: underline;
+}
+
+/* Form label styles */
+.form-label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Form input styles */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Submit button styles */
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #218838; /* Darker shade for hover */
+}
